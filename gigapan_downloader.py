@@ -99,7 +99,7 @@ def download_tiles(out_folder, output_format, img_id, session, tiles_url, height
                     try:
                         response = session.get(url, timeout=30)
                     except requests.RequestException as e:
-                        print(f"Error downloading image {url}: {e.reason}")
+                        print(f"Error downloading image {url}: {e}")
                         print("Retrying...")
                         continue
 
